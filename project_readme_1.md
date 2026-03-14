@@ -1,0 +1,1 @@
+the RSKSplit contract is deployed into the `0x2eDE00E732bda9304a70B514671912B6Ce4d7A7E` and verified.

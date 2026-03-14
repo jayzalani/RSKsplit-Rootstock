@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Space Mono", monospace;
+
+  --color-ink-950: #0a0a08;
+  --color-ink-900: #111110;
+  --color-ink-800: #18181a;
+  --color-ink-700: #222220;
+  --color-ink-600: #2a2a26;
+  --color-ink-500: #3a3a34;
+  --color-ink-400: #6b6b60;
+  --color-ink-300: #9a9a90;
+  --color-ink-200: #c8c8be;
+  --color-ink-100: #e8e8e0;
+
+  --color-gold-300: #fde68a;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-900: #78350f;
+
+  --animate-slide-up: slideUp 0.35s ease forwards;
+  --animate-fade-in: fadeIn 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-ink-950 text-ink-100 font-mono;
+    font-size: 13px;
+  }
+
+  ::-webkit-scrollbar { @apply w-1; }
+  ::-webkit-scrollbar-track { @apply bg-ink-950; }
+  ::-webkit-scrollbar-thumb { @apply bg-ink-600; }
+
+  ::selection { @apply bg-gold-900 text-gold-400; }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
